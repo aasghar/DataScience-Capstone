@@ -15,30 +15,18 @@ bigram <- readRDS(file="./data/bigram-20%.RData")
 
 shinyServer(function(input, output) {
     
-    wordPrediction1 <- reactive({
+    wordPrediction <- reactive({
         text <- input$text
         textInput <- cleanInput(text)
         wordCount <- length(textInput)
-        wordPrediction1 <- nextWordPrediction(wordCount,textInput) 
-                            #nextWordPrediction(wordCount,textInput, 2)
-                            #nextWordPrediction(wordCount,textInput, 3)
+        wordPrediction <- nextWordPrediction(wordCount,textInput) 
+                            
                             })
     
-#    wordPrediction2 <- reactive({
-#        text <- input$text
-#        textInput <- cleanInput(text)
-#        wordCount <- length(textInput)
-#        wordPrediction2 <- nextWordPrediction(wordCount,textInput, 2)})
+
     
-#    wordPrediction3 <- reactive({
-#        text <- input$text
-#        textInput <- cleanInput(text)
-#        wordCount <- length(textInput)
-#        wordPrediction3 <- nextWordPrediction(wordCount,textInput, 3)})
-    
-    output$predictedWord <- renderPrint(wordPrediction1())
-#    output$predictedWord2 <- renderPrint(wordPrediction2())
-#    output$predictedWord3 <- renderPrint(wordPrediction3())
+    output$predictedWord <- renderPrint(wordPrediction())
+
     
     output$enteredWords <- renderText({ input$text }, quoted = FALSE)
 })

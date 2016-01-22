@@ -48,7 +48,7 @@ shinyUI(navbarPage("Coursera Data Science Capstone",
                             )
                    ),
                    
-                   ############################### ~~~~~~~~2~~~~~~~~ ##############################
+                   
                    ## Tab 2 - About 
                    
                    tabPanel("About This Application",
@@ -62,7 +62,7 @@ shinyUI(navbarPage("Coursera Data Science Capstone",
                             )
                    ),
                    
-                   ############################### ~~~~~~~~F~~~~~~~~ ##############################
+                   
                    
                    # Footer
                    
