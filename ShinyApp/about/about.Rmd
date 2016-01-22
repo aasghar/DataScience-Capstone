@@ -1,0 +1,46 @@
+---
+title: "about"
+author: "Ali Asghar"
+date: "January 19, 2016"
+output: html_document
+---
+
+### Coursera Data Science Capstone Project
+
+
+This application is the capstone project for the Coursera Data Science specialization which was hosted by professors of the Johns Hopkins University in cooperation with SwiftKey.
+
+
+******
+
+#### The Objective
+
+The aim of this capstone project is to build a shiny application that is able to predict the next word of a phrase that is entered by a user in this applicaiton. 
+
+This project was divided into sub tasks like data cleaning, exploratory data analysis, model building, developing shiny application and developing the presentaiton.
+
+All text data that is used to create a frequency dictionary and thus to predict the next words comes from a corpus called [HC Corpora](http://www.corpora.heliohost.org/). 
+
+All text mining and natural language processing was done with the usage of a variety of well-known R packages including "tm", "stringr" and "stylo".
+
+******
+
+#### The Applied Methods & Models
+
+Since the size of the HC Corpora data was large, 20% of the corpus was sampled for further processing. This sample was cleaned by conversion to lowercase, removing punctuation,links, white space, numbers, profane words and all kinds of special characters.
+This data sample was then tokenized into n-grams using the "stylo" package. 
+
+Consequently unigram, bigram, trigram, quadgram and fivegram term frequency matrices were transferred into frequency dictionaries.
+
+The resulting data.frames are ordered and used in this application to predict the next word when a user inputs certain text.The prediction is chosen based on the frequency of words that appear in the text after a specific input by a user.
+
+******
+
+#### The Usage Of The Application
+
+
+The user interface consists of three parts, 
+
+
+******
+
